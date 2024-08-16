@@ -9,7 +9,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "format": "npx @biomejs/biome format --write ./src",
     "knip": "knip",
     "check": "bunx biome check --write ."
   },
