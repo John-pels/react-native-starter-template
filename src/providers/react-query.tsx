@@ -1,33 +1,33 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import * as React from 'react'
-import { Platform } from 'react-native';
+import { Platform } from 'react-native'
 
 export function ReactQueryDevtools() {
-    if (__DEV__ && Platform.OS === 'web') {
-        const { ReactQueryDevtools } = require('@tanstack/react-query-devtools');
-        return <ReactQueryDevtools />;
-    }
-    return null;
+  if (__DEV__ && Platform.OS === 'web') {
+    const { ReactQueryDevtools } = require('@tanstack/react-query-devtools')
+    return <ReactQueryDevtools />
+  }
+  return null
 }
 export function RQProvider({
-    children,
+  children,
 }: Readonly<{ children: React.ReactNode }>) {
-    const [queryClient] = React.useState(
-        () =>
-            new QueryClient({
-                defaultOptions: {
-                    queries: {
-                        retry: 2,
-                        refetchOnWindowFocus: false,
-                    },
-                },
-            })
-    )
+  const [queryClient] = React.useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            retry: 2,
+            refetchOnWindowFocus: false,
+          },
+        },
+      })
+  )
 
-    return (
-        <QueryClientProvider client={queryClient}>
-            {children}
-            <ReactQueryDevtools />
-        </QueryClientProvider>
-    )
+  return (
+    <QueryClientProvider client={queryClient}>
+      {children}
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  )
 }

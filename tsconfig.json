@@ -10,7 +10,7 @@
       "@constants/*": ["src/constants/*"],
       "@theme/*": ["src/theme/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@context/*": ["src/context/*"],
+      "@contexts/*": ["src/contexts/*"],
       "@providers/*": ["src/providers/*"],
       "@store/*": ["src/store/*"],
       "@screens/*": ["src/screens/*"],

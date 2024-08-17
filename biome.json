@@ -17,7 +17,8 @@
       },
       "correctness": {
         "noUnusedVariables": "error",
-        "noUnusedImports": "error"
+        "noUnusedImports": "error",
+        "useExhaustiveDependencies": "off"
       }
     }
   },
