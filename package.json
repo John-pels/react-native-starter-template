@@ -18,11 +18,13 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/native": "^6.0.2",
+    "@tanstack/react-query": "^5.51.23",
     "expo": "~51.0.28",
     "expo-constants": "~16.0.2",
     "expo-font": "~12.0.9",
     "expo-linking": "~6.3.1",
     "expo-router": "~3.5.23",
+    "expo-secure-store": "^13.0.2",
     "expo-splash-screen": "~0.27.5",
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
@@ -39,6 +41,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@biomejs/biome": "1.8.3",
+    "@tanstack/react-query-devtools": "^5.51.23",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.3.0",
     "@types/react": "~18.2.45",
