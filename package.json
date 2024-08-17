@@ -17,8 +17,10 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
+    "@react-native-cookies/cookies": "^6.2.1",
     "@react-navigation/native": "^6.0.2",
     "@tanstack/react-query": "^5.51.23",
+    "axios": "^1.7.4",
     "expo": "~51.0.28",
     "expo-constants": "~16.0.2",
     "expo-font": "~12.0.9",

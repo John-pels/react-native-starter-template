@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import * as SecureStore from 'expo-secure-store'
 import * as React from 'react'
 import { Platform } from 'react-native'
@@ -65,7 +64,7 @@ export function useStorageState<T>(key: string): UseStateHook<T> {
     }
 
     getStoredValue()
-  }, [key])
+  }, [key, setState])
 
   // Set
   const setValue = React.useCallback(
@@ -80,7 +79,7 @@ export function useStorageState<T>(key: string): UseStateHook<T> {
       }
       setState(value ?? null)
     },
-    [key]
+    [key, setState]
   )
 
   return [state, setValue]
