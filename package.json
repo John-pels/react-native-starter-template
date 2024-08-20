@@ -5,12 +5,22 @@
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "prebuild": "expo prebuild",
+    "android": "expo run:android",
+    "android:release": "expo run:android --variant Release",
+    "android:dev-build": "eas build --platform android --profile development",
+    "android:dev-build:local": "eas build --profile development --platform android --local",
+    "android:preview": "eas build --profile preview --platform android",
+    "ios": "expo run:ios",
+    "ios:release": "expo run:ios --variant Release",
+    "ios:dev-build": "eas build --platform ios --profile ios-simulator",
+    "ios:dev-build:local": "eas build --profile development --platform ios --local",
+    "ios:preview": "eas build --profile preview --platform ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
     "knip": "knip",
-    "check": "bunx biome check --write ."
+    "check": "bunx biome check --write .",
+    "update-packages": "npx expo install --fix"
   },
   "jest": {
     "preset": "jest-expo"
