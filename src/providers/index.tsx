@@ -5,6 +5,8 @@ import {
 } from 'react-native-safe-area-context'
 import { SessionProvider } from '../contexts/session'
 import { RQProvider } from './react-query'
+import { RootSiblingParent } from 'react-native-root-siblings';
+
 
 export function Providers({
   children,
@@ -13,7 +15,9 @@ export function Providers({
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <SessionProvider>
-          <RQProvider>{children}</RQProvider>
+          <RQProvider>
+            <RootSiblingParent>{children}</RootSiblingParent>
+          </RQProvider>
         </SessionProvider>
       </GestureHandlerRootView>
     </SafeAreaProvider>
