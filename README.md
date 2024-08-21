@@ -83,7 +83,7 @@ Ensure you have the following installed:
 1. **Clone the repository:**
 
    ```sh
-   git clone git@github.com:John-pels/react-native-starter-template.git
+   git clone https://github.com/John-pels/react-native-starter-template.git
    cd react-native-starter-template
    ```
 
