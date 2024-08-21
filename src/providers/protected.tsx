@@ -7,11 +7,11 @@ export const ProtectedProvider = ({
 }: Readonly<{ children: React.ReactNode }>) => {
   const { isLoading, session } = useSession()
 
-  if (isLoading) {
-    return <Text> Loading...</Text>
-  }
-  if (!session) {
-    return <Redirect href={'/not-found' as Href} />
-  }
+  // if (isLoading) {
+  //   return <Text> Loading...</Text>
+  // }
+  // if (!session) {
+  //   return <Redirect href={'/not-found' as Href} />
+  // }
   return children
 }

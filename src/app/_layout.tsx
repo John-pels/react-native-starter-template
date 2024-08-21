@@ -21,6 +21,18 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   })
 
+  //Toggle light and dark themes
+
+  // const { theme: mode, toggleTheme } = useThemeContext();
+  // const [isEnabled, setIsEnabled] = useState(mode === 'light' ? false : true);
+  // const dispatch = useAppDispatch();
+  // const toggleSwitch = () => {
+  //   toggleTheme();
+  //   setIsEnabled(previousState => !previousState);
+  //   const newTheme = isEnabled ? 'dark' : 'light';
+  //   dispatch(setTheme(newTheme));
+  // };
+
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
