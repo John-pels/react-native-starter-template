@@ -17,7 +17,7 @@ This Template is a React Native template leveraging on expo and [Expo File-Based
 
   - Multi-language support using `react-i18next` for seamless localization.
 
-- **🗃️ State Management with Redux**
+- **🗃️ State Management with Redux and Context API**
 
   - Centralized state management for efficient global state access and updates.
 
