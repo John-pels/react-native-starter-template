@@ -6,8 +6,10 @@ import { ExternalLink } from '@components/ExternalLink'
 import ParallaxScrollView from '@components/ParallaxScrollView'
 import { ThemedText } from '@components/ThemedText'
 import { ThemedView } from '@components/ThemedView'
+import { useTranslation } from 'react-i18next'
 
 export default function TabTwoScreen() {
+  const { t } = useTranslation('explore')
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -16,7 +18,7 @@ export default function TabTwoScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">{t('title')}</ThemedText>
       </ThemedView>
       <ThemedText>
         This app includes example code to help you get started.

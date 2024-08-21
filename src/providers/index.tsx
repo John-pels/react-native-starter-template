@@ -13,6 +13,8 @@ import { setBackgroundColorAsync } from 'expo-system-ui';
 import { useEffect } from 'react';
 import { theme } from '@theme/.';
 import { StatusBar as NativeStatusBar } from 'react-native';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../utils/i18n';
 
 
 export function Providers({
@@ -41,7 +43,11 @@ export function Providers({
           <RQProvider>
             <Provider store={store}>
               <ThemeProvider>
-                <RootSiblingParent>{children}</RootSiblingParent>
+                <RootSiblingParent>
+                  <I18nextProvider i18n={i18n}>
+                    {children}
+                  </I18nextProvider>
+                </RootSiblingParent>
               </ThemeProvider>
             </Provider>
           </RQProvider>
