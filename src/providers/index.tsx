@@ -6,6 +6,8 @@ import {
 import { SessionProvider } from '../contexts/session'
 import { RQProvider } from './react-query'
 import { RootSiblingParent } from 'react-native-root-siblings';
+import { Provider } from 'react-redux';
+import { store } from '../store';
 
 
 export function Providers({
@@ -16,7 +18,9 @@ export function Providers({
       <GestureHandlerRootView style={{ flex: 1 }}>
         <SessionProvider>
           <RQProvider>
-            <RootSiblingParent>{children}</RootSiblingParent>
+            <Provider store={store}>
+              <RootSiblingParent>{children}</RootSiblingParent>
+            </Provider>
           </RQProvider>
         </SessionProvider>
       </GestureHandlerRootView>
