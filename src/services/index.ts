@@ -1,25 +1,24 @@
-import { BACKEND_BASE_URL } from '@config/env'
-import Cookies from '@react-native-cookies/cookies'
-import axios, { type AxiosInstance } from 'axios'
+import { BACKEND_BASE_URL, TOKEN_KEY } from "@config/env";
+import axios, { type AxiosInstance } from "axios";
+import * as SecureStore from "expo-secure-store";
 
 export const Fetch: AxiosInstance = axios.create({
   baseURL: BACKEND_BASE_URL,
-  timeout: 5000,
+  timeout: 50000,
   timeoutErrorMessage:
-    'Request timeout there is maybe a problem with the server!',
+    "Request timeout there is maybe a problem with the server!",
   withCredentials: true,
-})
+});
 
 Fetch.interceptors.request.use(
   async (config) => {
-    const cookie = await Cookies.get(BACKEND_BASE_URL)
-
-    if (cookie?.value) {
-      config.headers.Authorization = `Bearer ${cookie.value}`
+    const accessToken = await SecureStore.getItemAsync(TOKEN_KEY);
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`;
     }
-    return config
+    return config;
   },
   (error) => {
-    return Promise.reject(error)
+    return Promise.reject(error);
   }
-)
+);
