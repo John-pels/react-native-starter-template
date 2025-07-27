@@ -156,10 +156,10 @@ MIT License
 
 ## 👤 Author
 
-[John O. Ajeigbe](mailto:ajeigbejohnolu@gmail.com)
+[John O. Emmanuel](mailto:ajeigbejohnolu@gmail.com)
 
 ---
 
 Feel free to contribute to this template by submitting issues or pull requests.
 
-For any questions or support, please contact [John O. Ajeigbe](mailto:ajeigbejohnolu@gmail.com).
+For any questions or support, please contact [John O. Emmanuel](mailto:ajeigbejohnolu@gmail.com).
